@@ -16,6 +16,6 @@ jobs:
       - name: 'Checkout code'
         uses: actions/checkout@v2  # Make sure the code is checked out first
 
-      # - name: 'Run Composite Action'
-      #   uses: ./action.yml  # Reference your local composite action after checkout
+      - name: 'Run Composite Action'
+        uses: ./  # Reference your local composite action after checkout
 
