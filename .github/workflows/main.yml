@@ -1,0 +1,15 @@
+name: 'Python Tests Workflow'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Use Setup Python and Run Tests'
+        uses: username/repo-name@v1
+        with:
+          python-version: '3.9'
