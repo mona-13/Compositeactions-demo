@@ -5,9 +5,14 @@ on:
     branches:
       - main
 
+      
+
 jobs:
   test:
     runs-on: ubuntu-latest
+     permissions:
+      contents: read  # Read access to the code
+      packages: write
     steps:
       - name: 'Use Setup Python and Run Tests'
         uses: username/repo-name@v1
