@@ -14,7 +14,27 @@ jobs:
 
     steps:
       - name: 'Checkout code'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2  # Make sure the code is checked out first
 
       - name: 'Run Composite Action'
-        uses: ./action.yml  # This points to your composite action in the root directory
+        uses: ./action.yml  # Reference your local composite action after checkout
+# name: 'Run Composite Action'
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   demo-job:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: read  # Read access to the code
+#       packages: write
+
+#     steps:
+#       - name: 'Checkout code'
+#         uses: actions/checkout@v2
+
+#       - name: 'Run Composite Action'
+#         uses: ./action.yml  # This points to your composite action in the root directory
