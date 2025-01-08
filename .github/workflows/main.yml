@@ -1,20 +1,20 @@
-name: 'Python Tests Workflow'
+name: 'Run Composite Action'
 
 on:
   push:
     branches:
       - main
 
-      
-
 jobs:
-  test:
+  demo-job:
     runs-on: ubuntu-latest
      permissions:
       contents: read  # Read access to the code
       packages: write
+
     steps:
-      - name: 'Use Setup Python and Run Tests'
-        uses: username/repo-name@v1
-        with:
-          python-version: '3.9'
+      - name: 'Checkout code'
+        uses: actions/checkout@v2
+
+      - name: 'Run Composite Action'
+        uses: ./action.yml  # This points to your composite action in the root directory
