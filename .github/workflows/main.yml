@@ -15,5 +15,5 @@ jobs:
         uses: actions/checkout@v2  # Make sure the code is checked out first
 
       - name: 'Run Composite Action'
-        uses: ./action.yml  # Reference your local composite action after checkout
+        uses: mona-13/Compositeactions-demo@main  # Reference your local composite action after checkout
 
