@@ -8,6 +8,9 @@ on:
 jobs:
   demo-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read  # Read access to the code
+      packages: write 
    
 
     steps:
